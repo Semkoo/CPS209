@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0118)https://courses.ryerson.ca/bbcswebdav/pid-2580801-dt-content-rid-4766484_2/courses/cps209_w14_01/cps209-A1%282%29.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>209 Computer Science II: Assignment 1</title>
+
+<meta content="MSHTML 6.00.2712.300" name="GENERATOR"><style type="text/css"></style></head>
+<body bgcolor="#fffff">
+
+<center>
+<h2>
+   209 Computer Science II, Assignment 1
+<br><br>
+Due Date: March 10 at 11:59pm.
+</h2>
+</center>
+
+<u><b>Objective: </b></u>
+To practice using interfaces, inheritance, graphics, mouse event handling, and the Timer class.  
+
+<br><br>
+<b><u>Instructions</u></b>
+<ul>
+<li> Design a "pacman" style game where a "predator" creature moves around the game window and devours "prey" creatures. All creatures are animated using a timer. Creatures implement the interface <b>MoveableShape</b> that can be used as a generic
+mechanism for animating a shape.  A moveable shape must have 
+methods <b>void move()</b> and <b>void draw(Graphics2D g)</b> and <b>boolean collide(MoveableShape other)</b>.  
+<br><br>
+public interface MoveableShape 
+<br>{
+   <br>void move();
+   <br>boolean collide(MoveableShape other);
+   <br>void draw(Graphics2D g2);
+<br>}
+<br><br>
+
+<table cellspacing="5">
+
+<tbody><tr>
+<td align="left"><img src="./209 Computer Science II  Assignment 1_files/CreatureChase(1).PNG" align="TOP"></td>
+<td width="6">&nbsp;</td>
+
+</tr>
+<tr>
+<td>
+
+<font size="+1">Predator creature (yellow) chasing slow prey creatures (red) and fast prey creature (green)</font>
+</td>
+</tr>
+</tbody></table>
+<br><br>
+</li><li>Write a generic GamePanel that draws
+and moves (i.e. animates) an array list of MoveableShape objects.  The objects should be initially randomly positioned in the panel. Design a basic superclass <b>Creature</b> that stores the (x,y) position of a creature, the width and height of the creature's bounding rectangle, and any other variables and methods you deem necessary. The Creature class must implement the MoveableShape interface. You may choose to leave these methods empty or supply  default behavior in the Creature superclass. 
+<br><br>
+</li><li>The predator creature <b>is a</b> special creature that devours other prey creatures. That is, when the predator collides with a prey, it "eats" the prey by removing it from the array list. The predator is always moving - either up, down, left, or right - and only it's <b>direction</b> is under user control. The left mouse button turns the predator 90 degrees counterclockwise (i.e. if it was moving up, then a left mouse button click will change its direction to left). The right mouse button turns it 90 degrees clockwise. Hints: 1) the collide() method can use the predator's "contains()" method, 2) the MouseEvent class has a getButton() method - see the Java API.
+<br><br> 
+</li><li>A prey creature <b>is a </b> special creature. Create two different types of prey. One type should move only slowly, perhaps centered around its original position, in some simple movement pattern of your choosing. The other should move more quickly and move further. 
+<br><br>
+</li><li>The shape and color of all 3 types of creatures is up to you - they can be simple or complex. See the marking scheme below. 
+<br><br>
+</li><li>The game is over when the predator has devoured all the prey. The game should start (and creatures begin moving) when the user presses a button or when the user clicks a mouse button for the first time - its your choice. Measure and print the elapsed time for a user to finish the game on the console window.
+<br><br>  
+</li><li><b>Details</b>:
+<ul>
+<li> For a maximum of 6 marks do just the above except have only a single prey creature that does not move at all. Only the predator moves. All creatures have a simple shape (e.g. circle or rectangle). 
+</li><li> For a maximum of 7 marks, creatures are more complex in shape (e.g. multiple parts/components or the use of the arc2D class etc.).   
+</li><li>For a maximum of 8 marks, have one prey type creature that moves slowly in some simple pattern (e.g. horizontally back and forth). 
+</li><li>For a maximum of 9 marks, have two prey type creatures and both move in some simple pattern - one slow prey and one fast prey. 
+</li><li> For a maximum of 9.5 marks display the elapsed time (in minutes and seconds) somewhere on the panel as the game progresses. 
+</li><li> For a maximum of 10 marks have the quick creature move away from (i.e. evade) the predator when the predator gets close (Hint: have each quick creature check the distance to the predator using the the quick creature's collide() method). Of course, the predator should eventually be able to eat the prey. 
+</li><li> Note that 10% of your mark is for program structure, style and documentation.  You must use inheritance. Also, if inheritance and the MoveableShape interface are used properly, then the prey creatures can all be stored in a single arraylist of MoveableShape type objects. You must use javadoc style documentation, have proper indentation, meaningful variable names, class names starting with uppercase, variable names starting with lower case, constants all capitals.  
+</li></ul>
+<ul>
+<li><br.<br><b>Submit your java files on Blackboard by Mar. 10.</b>
+</br.<br></li></ul>
+
+</li></ul>
+
+
+
+</body></html>

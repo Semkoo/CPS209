@@ -7,3 +7,4 @@ To practice using interfaces, inheritance, graphics, mouse event handling, and t
 
 ### Assignment 2: LinkedList Simulator Graphical
 To practice using Linked Lists, recursion, inheritance, frames, listeners, and standard documentation.
+![screenshot 1](https://user-images.githubusercontent.com/17598409/29996452-8f690918-8fcc-11e7-9eca-e4e2aea01f62.PNG)
